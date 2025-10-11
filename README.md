@@ -19,8 +19,8 @@ typst watch --font-path ./template/res/fonts ./example.typ
 ```
 
 You can use IDE plugins, which provide language server and live preview.  
-Jetbrains IDEs: [Typst Support](https://plugins.jetbrains.com/plugin/27697-typst-support)
-Neovim: [Typst Preview](https://github.com/chomosuke/typst-preview.nvim)
+Jetbrains IDEs: [Typst Support](https://plugins.jetbrains.com/plugin/27697-typst-support)  
+Neovim: [Typst Preview](https://github.com/chomosuke/typst-preview.nvim)  
 
 ## Example
 
