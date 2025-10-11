@@ -9,9 +9,14 @@
 
 #import "./front.typ": *
 
-#let template(meta: (), print: false, ..intro-args, body) = {
+#let template(
+  meta: (), 
+  print: false,
+  show-todos: false,
+  ..intro-args, 
+  body) = {
   set document(
-    author: meta.author.name,
+    author: meta.author,
     title: meta.title, date:
     meta.submission-date
   )
@@ -31,7 +36,7 @@
   )
 
   // render title page before configuring the rest, which we don't use
-  title-page(print, ..meta)
+  title-page(print, show-todos, ..meta)
   
   set par(justify: true)
 
@@ -124,7 +129,7 @@
   }
 
   
-  introduction(print, meta.submission-date, ..intro-args)
+  introduction(print, meta, ..intro-args)
 
   // start numbering from the first page of actual text
   set page(numbering: "1")
@@ -142,12 +147,8 @@
   body
 }
 
-#let todo(msg) = {
-  counter("todo").step()
-  [#text(fill: red, weight: "bold")[TODO: #msg]]
-}
-
 #let note(msg) = {
   counter("note").step()
   [#block(fill: yellow, width: 100%, inset: 3pt, radius: 3pt)[NOTE: #msg]]
 }
+

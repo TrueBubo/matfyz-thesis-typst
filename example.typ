@@ -3,36 +3,38 @@
 #show: template.with(
   meta: (
     title: "An Interesting Thesis Title",
-    author: (
-      name: "Jan Novák",
-      email: "someone@fel.cvut.cz",
-      url: "https://my.project/url",
-    ),
-    submission-date: datetime(year: 2012, month: 1, day: 21),
+    title-cz: "Velice zajimavy nazev",
+    author: "Jan Novák",
+    submission-date: datetime(year: 2025, month: 1, day: 1),
 
     // true for bachelor's thesis, false for master's thesis
-    bachelor: false,
+    bachelor: true,
     supervisor: "Ing. Jan Novák, PhD.",
 
-    faculty: "Faculty of Electrical Engineering",
-    department: "Department of Measurement",
-    study-programme: "Open Informatics",
-    branch-of-study: "Computer Engineering", // studijni obor
+    department: "Department of Software Engineering",
+    department-cz: "Katedra softwarového inženýrství",
+    study-programme: "Programming and Software Development",
   ),
 
   // set to true if generating a PDF for print (shifts page layout, turns code blocks greyscale, correctly aligns odd/even pages,...)
   print: false,
 
+  show-todos: false,
+
   abstract-en: [
-    #lorem(40)
-    
     #lorem(60)
   ],
 
   abstract-cz: [
-    #lorem(40)
-    
     #lorem(60)
+  ],
+
+  keywords-en: [
+    #lorem(20)
+  ],
+
+  keywords-cz: [
+   #lorem(20)
   ],
 
   acknowledgement: [
@@ -46,7 +48,7 @@
 
 #lorem(80) @template
 
-#lorem(120)
+#lorem(120) @template-mff
 
 #lorem(140)
 
