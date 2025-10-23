@@ -189,7 +189,7 @@
     // outline should be on the right, but the outline title has a pagebreak
     pagebreak(to: "even")
   }
-  outline(depth: 2)
+  outline(depth: 3)
 
   pagebreak(weak: true)
 }
